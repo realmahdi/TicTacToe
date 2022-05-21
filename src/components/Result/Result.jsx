@@ -15,7 +15,7 @@ function Result({winner, onClick}) {
           flex items-center justify-center
           flex-col space-y-4
           text-white
-          bg-gray-400 bg-opacity-90
+          bg-gray-300 bg-opacity-90
           text-7xl text-red-black
           text-center font-extrabold
           ">
