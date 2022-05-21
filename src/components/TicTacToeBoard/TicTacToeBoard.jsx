@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Square from "../Square/Square";
 import Result from "../Result/Result";
+import detectWinner from "../../utils/GameUtils";
 
 function TicTacToeBoard() {
     const EMPTY = "EMPTY";
@@ -34,12 +35,14 @@ function TicTacToeBoard() {
         />
     })
 
+    const winner = detectWinner(board.positions);
+    console.log(winner);
     return (
         <>
             <div className="inline-grid grid-cols-3 gap-2 bg-gray-200">
                 {gameBoard}
             </div>
-            <Result/>
+            {winner && <Result winner={winner}/>}
         </>
     );
 }
