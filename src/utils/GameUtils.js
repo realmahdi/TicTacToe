@@ -5,7 +5,7 @@
 function detectWinner(board) {
     const CIRCLE = "O";
     const CROSS = "X";
-    const EQUAL = "EQUAL"
+    const EMPTY = "EMPTY"
 
     // Check the row O
     if (board[0] === CIRCLE && board[1] === CIRCLE && board[2] === CIRCLE) return CIRCLE;
@@ -32,8 +32,8 @@ function detectWinner(board) {
     if (board[0] === CROSS && board[4] === CROSS && board[8] === CROSS) return CROSS;
     if (board[2] === CROSS && board[4] === CROSS && board[6] === CROSS) return CROSS;
 
-    if (board.every(position => position !== EQUAL))
-        return EQUAL;
+    if (board.every(position => position !== EMPTY))
+        return "EQUAL";
 }
 
 export default detectWinner
