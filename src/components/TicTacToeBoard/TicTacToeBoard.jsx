@@ -9,11 +9,20 @@ function TicTacToeBoard() {
     const [board, setBoard] = useState({
         player: CIRCLE,
         positions: [
-            EMPTY, EMPTY, CROSS,
             EMPTY, EMPTY, EMPTY,
-            CIRCLE, EMPTY, EMPTY,
+            EMPTY, EMPTY, EMPTY,
+            EMPTY, EMPTY, EMPTY,
         ]
     });
+
+    function takeTurn(pos) {
+        const newBoard = [...board.positions];
+        newBoard[pos] = board.player;
+        setBoard({
+            player: board.player === CIRCLE ? CROSS : CIRCLE,
+            positions: newBoard
+        });
+    }
 
     const gameBoard = board.positions.map((item, index) => {
         return <Square
@@ -23,10 +32,6 @@ function TicTacToeBoard() {
             onClick={takeTurn}
         />
     })
-
-    function takeTurn(pos) {
-        console.log(pos, 'clicked');
-    }
 
     return (
         <div className="inline-grid grid-cols-3 gap-2 bg-gray-200">
