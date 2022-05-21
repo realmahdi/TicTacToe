@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Square(props) {
+function Square({pos}) {
     return (
         <div className="w-[100px] h-[100px] flex items-center justify-center bg-white">
-            Square
+            {pos}
         </div>
     );
 }
