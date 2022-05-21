@@ -2,7 +2,14 @@ import React from 'react';
 
 function Circle() {
     return (
-        <div>Circle</div>
+        <svg
+            width="100"
+            height="100"
+            viewBox="-50 -50 100 100"
+            className="fill-transparent stroke-[16px] stroke-[#0E2239]"
+        >
+            <circle cx="0" cy="0" r="40"/>
+        </svg>
     );
 }
 
