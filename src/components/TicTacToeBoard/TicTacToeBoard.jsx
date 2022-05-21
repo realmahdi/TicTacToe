@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Square from "../Square/Square";
+import Result from "../Result/Result";
 
 function TicTacToeBoard() {
     const EMPTY = "EMPTY";
@@ -34,9 +35,12 @@ function TicTacToeBoard() {
     })
 
     return (
-        <div className="inline-grid grid-cols-3 gap-2 bg-gray-200">
-            {gameBoard}
-        </div>
+        <>
+            <div className="inline-grid grid-cols-3 gap-2 bg-gray-200">
+                {gameBoard}
+            </div>
+            <Result/>
+        </>
     );
 }
 
