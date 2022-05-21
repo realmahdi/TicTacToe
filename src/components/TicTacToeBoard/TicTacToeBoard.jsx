@@ -6,6 +6,15 @@ function TicTacToeBoard() {
     const CIRCLE = "O";
     const CROSS = "X";
 
+    const [board, setBoard] = useState({
+        player: CIRCLE,
+        positions: [
+            EMPTY, EMPTY, EMPTY,
+            EMPTY, EMPTY, EMPTY,
+            EMPTY, EMPTY, EMPTY,
+        ]
+    });
+
     return (
         <div className="inline-grid grid-cols-3 gap-2 bg-gray-200">
             <Square pos={0}/>
