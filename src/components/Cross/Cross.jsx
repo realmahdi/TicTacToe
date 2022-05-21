@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Cross(props) {
+function Cross() {
     return (
-        <div></div>
+        <div>Cross</div>
     );
 }
 

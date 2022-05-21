@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Circle(props) {
+function Circle() {
     return (
-        <div></div>
+        <div>Circle</div>
     );
 }
 
