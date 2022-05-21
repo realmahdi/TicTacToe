@@ -3,8 +3,8 @@ import React from 'react';
 function Circle() {
     return (
         <svg
-            width="100"
-            height="100"
+            width="90"
+            height="90"
             viewBox="-50 -50 100 100"
             className="fill-transparent stroke-[16px] stroke-[#0E2239]"
         >
