@@ -33,16 +33,26 @@ function TicTacToeBoard() {
             value={item}
             onClick={takeTurn}
         />
-    })
+    });
 
+    const resetGame = () => {
+        setBoard({
+            player: CIRCLE,
+            positions: [
+                EMPTY, EMPTY, EMPTY,
+                EMPTY, EMPTY, EMPTY,
+                EMPTY, EMPTY, EMPTY,
+            ]
+        });
+    }
     const winner = detectWinner(board.positions);
-    console.log(winner);
+
     return (
         <>
             <div className="inline-grid grid-cols-3 gap-2 bg-gray-200">
                 {gameBoard}
             </div>
-            {winner && <Result winner={winner}/>}
+            {winner && <Result winner={winner} onClick={resetGame}/>}
         </>
     );
 }
